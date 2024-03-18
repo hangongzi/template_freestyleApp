@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <title>E-commerce Website</title>
+</head>
+<body>
+  <div class="ui three column stackable grid container">
+    <div class="column">
+      <!-- Form for adding, updating, and deleting product information -->
+      <form id="productForm">
+        <div class="ui form">
+          <div class="field">
+            <label>Product Name</label>
+            <input type="text" name="productName" required>
+          </div>
+          <div class="field">
+            <label>Specifications</label>
+            <input type="text" name="specifications" required>
+          </div>
+          <div class="field">
+            <label>Description</label>
+            <textarea name="description" maxlength="500" required></textarea>
+          </div>
+          <div class="field">
+            <label>Promotion Date Range</label>
+            <input type="date" name="promotionDateRangeStart" required>
+            <input type="date" name="promotionDateRangeEnd" required>
+          </div>
+          <div class="field">
+            <label>Promotion Price</label>
+            <input type="number" name="promotionPrice" step="0.01" required>
+          </div>
+          <button class="ui primary button" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="column">
+      <!-- Display product information -->
+      <div id="productInfo"></div>
+    </div>
+    <div class="column">
+      <!-- User comment section -->
+      <div id="userComments">
+        <!-- User comments will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
